@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinity School – Home</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 1;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #eaf9ff, #ffffff);
+    }
+    nav {
+      background-color: #afd077;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #cfefff;
+      background-size: cover;
+      background-position: center;
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: #3180c1;
+    }
+    .cloud-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .cloud {
+      background: #ffffff;
+      border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+      padding: 20px 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 250px;
+      text-align: center;
+    }
+    .cloud h2 {
+      font-size: 20px;
+      color: #3180c1;
+    }
+    .cloud p {
+      font-size: 14px;
+      color: #555;
+    }
+    .cta {
+      margin-top: 30px;
+    }
+    .cta a {
+      background-color: #6db100;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .grade-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+    .grade-card {
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 280px;
+      flex: 1 1 240px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .grade-card h3 {
+      margin-top: 0;
+      color: #d9534f;
+    }
+    .grade-card p {
+      font-size: 14px;
+      color: #333;
+    }
+    .subject-list {
+      margin-top: 10px;
+    }
+    .subject-list div {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #3180c1;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Infinity School je za beskonačnu zabavu i učenje </h1>
+    <div class="cloud-row">
+      <a href="#luka-section" style="text-decoration: none; color: inherit;">
+        <div class="cloud">
+          <h2>Luka</h2>
+          <p>Čitanje • Gramatika • Pisanje</p>
+        </div>
+      </a>
+      <div class="cloud">
+        <h2>Anya</h2>
+        <p>Čitanje • Gramatika • Pisanje</p>
+      </div>
+      <div class="cloud">
+        <h2>TBD</h2>
+        <p>Games • Reading • Real-world play • Reflection</p>
+      </div>
+    </div>
+   <!-- <div class="cta">
+      <a href="#">Pocni Zadatak</a>
+    </div>-->
+  </section>
+
+  <nav>
+    <a href="index.html">Početna</a>
+    <a href="gramatika.html">Gramatika</a>
+    <a href="#">Skolski Zadaci</a>
+    <a href="#">Kucni Zadaci</a>
+   <a href="#">Raspored</a>
+  </nav>
+
+  <section class="grade-grid">
+    <div class="grade-card" id="luka-section">
+      <h3>Luka</h3>
+      <p>Današnji zadaci.</p>
+      <div class="subject-list">
+        <div>Math <span>169 skills >></span></div>
+        <div>Language arts <span>110 skills >></span></div>
+      </div>
+      <h4>Današnji zadaci</h4>
+      <ul id="luka-task-list"></ul>
+    </div>
+    <div class="grade-card">
+      <h3>Anya</h3>
+      <p>Comparing numbers, letter sounds, communities, and more.</p>
+      <div class="subject-list">
+        <div>Math <span>359 skills >></span></div>
+        <div>Language arts <span>180 skills >></span></div>
+        <div>Science <span>64 skills >></span></div>
+        <div>Social studies <span>62 skills >></span></div>
+      </div>
+    </div>
+    <div class="grade-card">
+      <h3>Kućni Zadaci</h3>
+      <p>Place-value models, irregular plurals, and more.</p>
+      <div class="subject-list">
+        <div>Math <span>332 skills >></span></div>
+        <div>Language arts <span>239 skills >></span></div>
+        <div>Science <span>84 skills >></span></div>
+        <div>Social studies <span>63 skills >></span></div>
+      </div>
+    </div>
+    <div class="grade-card">
+      <h3>Third grade</h3>
+      <p>Multiplying, pronouns, geography, and more.</p>
+      <div class="subject-list">
+        <div>Math <span>368 skills >></span></div>
+        <div>Language arts <span>232 skills >></span></div>
+        <div>Science <span>97 skills >></span></div>
+        <div>Social studies <span>99 skills >></span></div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <script>
+    const weeklyTasks = {
+      Luka: {
+        "2025-06-08": [
+          "Pročitati priču 'Zlatna jabuka'",
+          "Uraditi 10 zadataka iz matematike",
+          "Vežbati padeže – Nominativ"
+        ],
+        "2025-06-09": [
+          "Pisanje sastava",
+          "Matematika – sabiranje bez prelaženja",
+          "Čitanje naglas"
+        ]
+      }
+    };
+
+    const today = new Date().toISOString().split("T")[0];
+    const taskList = document.getElementById("luka-task-list");
+    const saved = JSON.parse(localStorage.getItem(`luka-${today}`)) || [];
+
+    function renderTasks() {
+      taskList.innerHTML = "";
+      const todaysTasks = weeklyTasks.Luka[today] || [];
+      todaysTasks.forEach((task, index) => {
+        const li = document.createElement("li");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = saved.includes(index);
+        checkbox.onchange = () => {
+          if (checkbox.checked && !saved.includes(index)) saved.push(index);
+          else saved.splice(saved.indexOf(index), 1);
+          localStorage.setItem(`luka-${today}`, JSON.stringify(saved));
+          renderTasks();
+        };
+        li.appendChild(checkbox);
+        li.appendChild(document.createTextNode(" " + task));
+        taskList.appendChild(li);
+      });
+
+      if (saved.length === todaysTasks.length && todaysTasks.length > 0) {
+        console.log("✔️ All tasks complete – ready to show tomorrow’s!");
+      }
+    }
+
+    renderTasks();
+  </script>
+</body>
+</html>
